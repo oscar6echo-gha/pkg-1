@@ -1,10 +1,5 @@
 # pkg_1
 
-[![PyPI - Version](https://img.shields.io/pypi/v/pkg-1.svg)](https://pypi.org/project/pkg-1)
-[![PyPI - Python Version](https://img.shields.io/pypi/pyversions/pkg-1.svg)](https://pypi.org/project/pkg-1)
-
----
-
 ## Table of Contents
 
 - [Install](#install)
