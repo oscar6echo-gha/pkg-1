@@ -1,0 +1,9 @@
+
+.py[cod]
+__pycache__
+
+*_cache
+
+.coverage
+
+dist
