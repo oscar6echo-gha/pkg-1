@@ -36,11 +36,31 @@ jobs:
           echo --- ls -al /mnt
           ls -al /mnt
 
-          echo --- sudo du -h -d 1 various directories
-          echo ----------------
-          sudo du -h -d 1 /home
-          sudo du -h -d 1 /usr/share
-          sudo du -h -d 1 /mnt
+          echo --- lscpu
+          lscpu
 
           echo --- lscpu
           lscpu
+
+      - name: Free space
+        run: |
+          sudo docker rmi $(docker image ls -aq) || true
+          sudo swapoff /mnt/swapfile || true
+          sudo rm -rf /mnt/swapfile /usr/share/dotnet /usr/local/lib/android /opt/ghc
+
+          echo --- rm -rf $AGENT_TOOLSDIRECTORY
+          rm -rf  $AGENT_TOOLSDIRECTORY
+
+          mkdir $HOME/data
+          ls -al $HOME/data
+
+      - name: Check space
+        run: |
+          echo --- df -hT
+          df -hT
+
+# echo --- sudo du -h -d 1 various directories
+# echo ----------------
+# sudo du -h -d 1 /home
+# sudo du -h -d 1 /usr/share
+# sudo du -h -d 1 /mnt
