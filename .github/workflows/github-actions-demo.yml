@@ -23,11 +23,19 @@ jobs:
       - name: Show runner characteristics
         run: |
           cat /etc/os-release
+
           echo --- df -hT
           df -hT
-          echo --- du -h -d 1 /
-          du -h -d 1 /
-          echo --- du -h -d 1 /mnt
-          du -h -d 1 /mnt
+
+          echo --- ls -al /
+          ls -al /
+
+          echo --- sudo du -h -d 1 <various directories>
+          echo ----------------
+          sudo du -h -d 1 /home
+          sudo du -h -d 1 /usr
+          sudo du -h -d 1 /mnt
+          sudo du -h -d 1 /opt
+
           echo --- lscpu
           lscpu
