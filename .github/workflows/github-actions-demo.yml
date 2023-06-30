@@ -25,9 +25,9 @@ jobs:
           cat /etc/os-release
           echo --- df -hT
           df -hT
-          echo --- du /
-          du /
-          echo --- du /mnt
-          du /mnt
+          echo --- du -h -d 1 /
+          du -h -d 1 /
+          echo --- du -h -d 1 /mnt
+          du -h -d 1 /mnt
           echo --- lscpu
           lscpu
