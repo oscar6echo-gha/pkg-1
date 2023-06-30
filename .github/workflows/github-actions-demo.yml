@@ -24,18 +24,23 @@ jobs:
         run: |
           cat /etc/os-release
 
+          echo --- echo $AGENT_TOOLSDIRECTORY
+          echo $AGENT_TOOLSDIRECTORY
+
           echo --- df -hT
           df -hT
 
           echo --- ls -al /
           ls -al /
 
+          echo --- ls -al /mnt
+          ls -al /mnt
+
           echo --- sudo du -h -d 1 various directories
           echo ----------------
           sudo du -h -d 1 /home
-          sudo du -h -d 1 /usr
+          sudo du -h -d 1 /usr/share
           sudo du -h -d 1 /mnt
-          sudo du -h -d 1 /opt
 
           echo --- lscpu
           lscpu
