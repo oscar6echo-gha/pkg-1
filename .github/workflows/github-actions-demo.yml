@@ -56,6 +56,14 @@ jobs:
           echo --- df -hT
           df -hT
 
+      - name: Check software
+        run: |
+          which node
+          which npm
+          node -v
+          npm -v
+          
+
 # echo --- sudo du -h -d 1 various directories
 # echo ----------------
 # sudo du -h -d 1 /home
