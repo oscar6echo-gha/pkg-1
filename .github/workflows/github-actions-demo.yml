@@ -62,7 +62,6 @@ jobs:
           which npm
           node -v
           npm -v
-          
 
 # echo --- sudo du -h -d 1 various directories
 # echo ----------------
