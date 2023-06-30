@@ -39,9 +39,6 @@ jobs:
           echo --- lscpu
           lscpu
 
-          echo --- lscpu
-          lscpu
-
       - name: Free space
         run: |
           sudo docker rmi $(docker image ls -aq) || true
